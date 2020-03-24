@@ -1,0 +1,113 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000                 area             moncode, CODE , READONLY
+    3 00000000         
+    4 00000000         
+    5 00000000         ; Bit Set/Reset register
+    6 00000000 40010C10 
+                       GPIOB_BSRR
+                               equ              0x40010C10
+    7 00000000                 extern           current_value
+    8 00000000                 export           timer_callback
+    9 00000000         
+   10 00000000         
+   11 00000000         timer_callback
+                               proc
+   12 00000000 4A08            ldr              r2, =current_value
+   13 00000002 6810            ldr              r0, [r2]
+   14 00000004 4B08            ldr              r3, =GPIOB_BSRR
+   15 00000006 B930            cbnz             r0, zero
+   16 00000008         
+   17 00000008         ;mise a 1 de PB1
+   18 00000008 F04F 0102       mov              r1, #0x00000002
+   19 0000000C 6019            str              r1, [r3]
+   20 0000000E F04F 0101       mov              r1, #1
+   21 00000012 6011            str              r1, [r2]
+   22 00000014 4770            bx               lr
+   23 00000016         
+   24 00000016         ;mise a 0 de PB1
+   25 00000016 F44F 3100 
+                       zero    mov              r1, #0x00020000
+   26 0000001A 6019            str              r1, [r3]
+   27 0000001C F04F 0100       mov              r1, #0
+   28 00000020 6011            str              r1, [r2]
+   29 00000022 4770            bx               lr
+   30 00000024         
+   31 00000024                 endp
+   32 00000024                 end
+              00000000 
+              40010C10 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\carre.d -o.\obj\carre.o -I.\RTE\_Simu -IC:\Users\jejed\AppDa
+ta\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\jejed\AppData\
+Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EVAL SET
+A 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 529" -
+-predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=carre.lst Sr
+c\Carre.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+moncode 00000000
+
+Symbol: moncode
+   Definitions
+      At line 2 in file Src\Carre.s
+   Uses
+      None
+Comment: moncode unused
+timer_callback 00000000
+
+Symbol: timer_callback
+   Definitions
+      At line 11 in file Src\Carre.s
+   Uses
+      At line 8 in file Src\Carre.s
+Comment: timer_callback used once
+zero 00000016
+
+Symbol: zero
+   Definitions
+      At line 25 in file Src\Carre.s
+   Uses
+      At line 15 in file Src\Carre.s
+Comment: zero used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+GPIOB_BSRR 40010C10
+
+Symbol: GPIOB_BSRR
+   Definitions
+      At line 6 in file Src\Carre.s
+   Uses
+      At line 14 in file Src\Carre.s
+Comment: GPIOB_BSRR used once
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+current_value 00000000
+
+Symbol: current_value
+   Definitions
+      At line 7 in file Src\Carre.s
+   Uses
+      At line 12 in file Src\Carre.s
+Comment: current_value used once
+1 symbol
+342 symbols in table
