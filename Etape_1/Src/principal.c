@@ -1,8 +1,13 @@
 #include "gassp72.h"
 
-//variables
-int Periode_en_Tck;
-extern void timer_callback();
+int Periode_en_Tck = 20;
+
+int current_value = 0;
+
+void timer_callback(void);
+	
+	
+
 
 int main(void)
 {
@@ -21,6 +26,6 @@ int main(void)
 	// lancement du timer
 	Run_Timer( TIM4 );
 	
-while	(1)
-	{	}
+	
+	while	(1){}
 }

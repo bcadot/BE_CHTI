@@ -388,9 +388,9 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>carre.s</FileName>
+              <FileName>Carre.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Src\carre.s</FilePath>
+              <FilePath>.\Src\Carre.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -410,7 +410,7 @@
             <File>
               <FileName>gassp72.lib</FileName>
               <FileType>4</FileType>
-              <FilePath>.\gassp72.lib</FilePath>
+              <FilePath>..\GASSP72\gassp72.lib</FilePath>
             </File>
           </Files>
         </Group>
