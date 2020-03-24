@@ -1,0 +1,37 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; ce programme est pour l'assembleur RealView (Keil)
+    2 00000000                 thumb
+    3 00000000                 area             moncode, code, readonly
+    4 00000000         ;
+    5 00000000         
+    6 00000000 40010C10 
+                       GPIOB_BSRR
+                               equ              0x40010C10  ; Bit Set/Reset reg
+                                                            ister
+    7 00000000         
+    8 00000000         timer_callback
+                               proc
+    9 00000000 B500            push             {lr}
+   10 00000002         
+   11 00000002 DE00            CBZ              r1, misea1
+   12 00000004         
+   13 00000004         ; mise a zero de PB1
+   14 00000004 4B02            ldr              r3, =GPIOB_BSRR
+   15 00000006 F44F 3100       mov              r1, #0x00020000
+   16 0000000A 6019            str              r1, [r3]
+   17 0000000C BD00            pop              {pc}
+   18 0000000E                 endp
+   19 0000000E                 end
+              00 00 40010C10 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\carre.d -o.\obj\carre.o -I.\RTE\_Simu -IC:\Users\Ben\AppData
+\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\Ben\AppData\Loca
+l\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EVAL SETA 1"
+ --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 529" --pre
+define="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=carre.lst Src\ca
+rre.s
