@@ -8,7 +8,6 @@
 ;
 somme proc
 	; M est dans r0
-	push {lr}
 	
 	ldr	r1, =TabSin 	; adresse de TabSin dans r1
 	mov r3, #2
@@ -23,7 +22,6 @@ somme proc
 	; valeur de retour dans r0 codé en 2 - 30 !!!!
 	; ATTENTION A LA RECONVERSION
 	
-	pop	{pc}
 	endp
 	end
 ;
