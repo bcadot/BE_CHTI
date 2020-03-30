@@ -1,7 +1,7 @@
 --cpu Cortex-M3
 ".\obj\principal.o"
-".\obj\table.o"
-".\obj\trigo.o"
+".\obj\tabletrigo.o"
+".\obj\gentable.o"
 ".\obj\startup-rvds.o"
 "..\GASSP72\gassp72.lib"
 --library_type=microlib --strict --scatter ".\Obj\CHTI.sct"

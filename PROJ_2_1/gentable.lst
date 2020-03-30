@@ -1,0 +1,86 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000                 AREA             Trigo, DATA, READONLY
+    3 00000000                 export           TabSin
+    4 00000000                 export           TabCos
+    5 00000000         
+    6 00000000         TabCos
+    7 00000000 FF 7F           DCW              32767       ;  0 0x7fff  0.9999
+                                                            7
+    8 00000002 82 5A           DCW              23170       ;  1 0x5a82  0.7070
+                                                            9
+    9 00000004 00 00           DCW              0           ;  2 0x0000  0.0000
+                                                            0
+   10 00000006 7E A5           DCW              -23170      ;  3 0xa57e -0.7070
+                                                            9
+   11 00000008 00 80           DCW              -32768      ;  4 0x8000 -1.0000
+                                                            0
+   12 0000000A 7E A5           DCW              -23170      ;  5 0xa57e -0.7070
+                                                            9
+   13 0000000C 00 00           DCW              0           ;  6 0x0000  0.0000
+                                                            0
+   14 0000000E 82 5A           DCW              23170       ;  7 0x5a82  0.7070
+                                                            9
+   15 00000010         TabSin
+   16 00000010 00 00           DCW              0           ;  0 0x0000  0.0000
+                                                            0
+   17 00000012 82 5A           DCW              23170       ;  1 0x5a82  0.7070
+                                                            9
+   18 00000014 FF 7F           DCW              32767       ;  2 0x7fff  0.9999
+                                                            7
+   19 00000016 82 5A           DCW              23170       ;  3 0x5a82  0.7070
+                                                            9
+   20 00000018 00 00           DCW              0           ;  4 0x0000  0.0000
+                                                            0
+   21 0000001A 7E A5           DCW              -23170      ;  5 0xa57e -0.7070
+                                                            9
+   22 0000001C 00 80           DCW              -32768      ;  6 0x8000 -1.0000
+                                                            0
+   23 0000001E 7E A5           DCW              -23170      ;  7 0xa57e -0.7070
+                                                            9
+   24 00000020         
+   25 00000020                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\gentable.d -o.\obj\gentable.o -I.\RTE\_Simu -IC:\Users\jejed
+\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\jejed\Ap
+pData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EV
+AL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 
+529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=gentab
+le.lst GenTable.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+TabCos 00000000
+
+Symbol: TabCos
+   Definitions
+      At line 6 in file GenTable.s
+   Uses
+      At line 4 in file GenTable.s
+Comment: TabCos used once
+TabSin 00000010
+
+Symbol: TabSin
+   Definitions
+      At line 15 in file GenTable.s
+   Uses
+      At line 3 in file GenTable.s
+Comment: TabSin used once
+Trigo 00000000
+
+Symbol: Trigo
+   Definitions
+      At line 2 in file GenTable.s
+   Uses
+      None
+Comment: Trigo unused
+3 symbols
+338 symbols in table

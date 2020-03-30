@@ -388,14 +388,14 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>table.s</FileName>
+              <FileName>TableTrigo.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Src\table.s</FilePath>
+              <FilePath>.\Src\TableTrigo.s</FilePath>
             </File>
             <File>
-              <FileName>trigo.s</FileName>
+              <FileName>GenTable.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\Src\trigo.s</FilePath>
+              <FilePath>.\GenTable.s</FilePath>
             </File>
           </Files>
         </Group>
