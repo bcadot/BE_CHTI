@@ -1,10 +1,14 @@
-extern int *TabSig;
-extern int *TabCos;
+const int N = 64;
+extern int TabSig[N];
 
-int calc(int *TSig,int k ,int *TCos);
+int dft(int *TSig,int k);
+
+int res[N];
 
 int main(void)
 {
-	int re = calc(TabSig, 0 , TabCos);	
+	for(int i = 1 ; i < N-1; i++){
+			res[i] = dft(TabSig, i);
+	}
 	while	(1){}
 }

@@ -157,34 +157,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>19</LineNumber>
+          <LineNumber>48</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218192</Address>
+          <Address>134218236</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>C:\Users\jejed\Documents\Cours INSA\BE Chti\PROJ_2_2\Src\TableTrigo.s</Filename>
+          <Filename>C:\Users\jejed\Documents\Cours INSA\BE Chti\PROJ_2_2\Src\dft.s</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\CHTI\Src/TableTrigo.s\19</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>10</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134218138</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\Src\principal.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\CHTI\Src/principal.c\10</Expression>
+          <Expression>\\CHTI\Src/dft.s\48</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -209,6 +193,13 @@
           <ItemText>r2,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
+      <WatchWindow2>
+        <Ww>
+          <count>0</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>res</ItemText>
+        </Ww>
+      </WatchWindow2>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
@@ -293,8 +284,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\Src\Calc.s</PathWithFileName>
-      <FilenameWithoutPath>Calc.s</FilenameWithoutPath>
+      <PathWithFileName>.\GenTable.s</PathWithFileName>
+      <FilenameWithoutPath>GenTable.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -305,8 +296,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\GenTable.s</PathWithFileName>
-      <FilenameWithoutPath>GenTable.s</FilenameWithoutPath>
+      <PathWithFileName>.\GenSignal.s</PathWithFileName>
+      <FilenameWithoutPath>GenSignal.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -317,8 +308,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>.\GenSignal.s</PathWithFileName>
-      <FilenameWithoutPath>GenSignal.s</FilenameWithoutPath>
+      <PathWithFileName>.\Src\dft.s</PathWithFileName>
+      <FilenameWithoutPath>dft.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

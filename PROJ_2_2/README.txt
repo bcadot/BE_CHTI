@@ -1,1 +1,0 @@
-Partie 2.2 tout juste commencée.

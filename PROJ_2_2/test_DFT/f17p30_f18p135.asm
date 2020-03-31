@@ -1,9 +1,25 @@
 	AREA Signal, DATA, READONLY
 	export TabSig
 
-; Fnor = 1.000
-;   Ph = 0.000
-;    A = 2048.000
+; Fnor1 = 17.000
+;   Ph1 = 30.000
+;    A1 = 1024.000
+; Fnor2 = 18.000
+;   Ph2 = 135.000
+;    A2 = 1024.000
+
+; valeurs attendues pour k = 17 :
+;	Re	0x376C909D	env 0.866 * 2^30
+;	Im	0xE000C6D7	env -0.5  * 2^30
+;	M2	0x0FFFA278	env 2^28
+;
+; valeurs attendues pour k = 18 :
+;	Re	0xD2BDF5FC	env -sqrt(0.5) * 2^30
+;	Im	0xD2BE8C7F	env -sqrt(0.5) * 2^30
+;	M2	0x10005BE5	env 2^28
+;
+; pour les autres valeurs de k sauf les alias de 17 et 18 :
+;	M2    < 0x0000000F
 
 TabSig
 	DCW	2211	;  0 0x08a3  0.53979
@@ -72,4 +88,3 @@ TabSig
 	DCW	3322	; 63 0x0cfa  0.81104
 
 	END
-
