@@ -14,28 +14,26 @@ ARM Macro Assembler    Page 1
     8 00000000         
     9 00000000         
    10 00000000         somme   proc
-   11 00000000 F04F 0102       mov              r1, #2
-   12 00000004 FB00 F001       mul              r0, r0, r1
-   13 00000008         ;i est dans r0, @TabCos dans r1, @TabSin dans r2
-   14 00000008 4904            ldr              r1, =TabCos
-   15 0000000A 4A05            ldr              r2, =TabSin
-   16 0000000C 5E09            ldrsh            r1, [r1,r0]
-   17 0000000E 5E12            ldrsh            r2, [r2,r0]
-   18 00000010 FB01 F301       mul              r3, r1, r1
-   19 00000014 FB02 3002       mla              r0, r2, r2, r3
-   20 00000018 4770            bx               lr
-   21 0000001A         
-   22 0000001A                 endp
-   23 0000001A                 end
+   11 00000000         ;i est dans r0, @TabCos dans r1, @TabSin dans r2
+   12 00000000 4905            ldr              r1, =TabCos
+   13 00000002 4A06            ldr              r2, =TabSin
+   14 00000004 F931 1010       ldrsh            r1, [r1,r0, LSL #1]
+   15 00000008 F932 2010       ldrsh            r2, [r2,r0, LSL #1]
+   16 0000000C FB01 F301       mul              r3, r1, r1
+   17 00000010 FB02 3002       mla              r0, r2, r2, r3
+   18 00000014 4770            bx               lr
+   19 00000016         
+   20 00000016                 endp
+   21 00000016                 end
               00 00 00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\obj\tabletrigo.d -o.\obj\tabletrigo.o -I.\RTE\_Simu -IC:\Users\B
-en\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\Ben\Ap
-pData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__EV
-AL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 
-529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=tablet
-rigo.lst Src\TableTrigo.s
+ork --depend=.\obj\tabletrigo.d -o.\obj\tabletrigo.o -I.\RTE\_Simu -IC:\Users\j
+ejed\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -IC:\Users\jeje
+d\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="
+__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION S
+ETA 529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=ta
+bletrigo.lst Src\TableTrigo.s
 
 
 
@@ -71,7 +69,7 @@ Symbol: TabCos
    Definitions
       At line 5 in file Src\TableTrigo.s
    Uses
-      At line 14 in file Src\TableTrigo.s
+      At line 12 in file Src\TableTrigo.s
 Comment: TabCos used once
 TabSin 00000000
 
@@ -79,7 +77,7 @@ Symbol: TabSin
    Definitions
       At line 6 in file Src\TableTrigo.s
    Uses
-      At line 15 in file Src\TableTrigo.s
+      At line 13 in file Src\TableTrigo.s
 Comment: TabSin used once
 2 symbols
 341 symbols in table
