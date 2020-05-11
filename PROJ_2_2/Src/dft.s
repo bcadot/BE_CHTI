@@ -34,7 +34,7 @@ calc 	proc ;r0 = @x , r1 = k , r2 = @cos ou @sin
 		mov r5, #0	;r5 = 0 (valeur de la somme)
 			
 boucle  ldrh r6, [r0, r3, LSL #1] ;r6 = x[i]
-		ldrsh r7, [r2, r5, LSL #1] ;r7 = cos[ik] ou sin[ik]
+		ldrsh r7, [r2, r4, LSL #1] ;r7 = cos[ik] ou sin[ik]
 		mla r5, r6, r7, r5 ;r5 += x[i]*cos[ik] ou x[i]*sin[ik]
 		
 		add r4, r1 ;maj de ik
