@@ -137,7 +137,7 @@
             <DriverSelection>4100</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
-          <Flash2>STLink\ST-LINKIII-KEIL_SWO.dll</Flash2>
+          <Flash2>BIN\UL2CM3.DLL</Flash2>
           <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
@@ -388,14 +388,19 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>TableTrigo.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Src\TableTrigo.s</FilePath>
-            </File>
-            <File>
               <FileName>GenTable.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\GenTable.s</FilePath>
+            </File>
+            <File>
+              <FileName>GenSignal.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\GenSignal.s</FilePath>
+            </File>
+            <File>
+              <FileName>dft.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Src\dft.s</FilePath>
             </File>
           </Files>
         </Group>
