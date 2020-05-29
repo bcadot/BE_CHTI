@@ -392,16 +392,6 @@
               <FileType>2</FileType>
               <FilePath>.\Src\dft.s</FilePath>
             </File>
-            <File>
-              <FileName>GenSignal.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Src\GenSignal.s</FilePath>
-            </File>
-            <File>
-              <FileName>GenTable.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Src\GenTable.s</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

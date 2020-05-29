@@ -12,6 +12,7 @@ unsigned short dma_buf[N];
 int compteur_occurences[6];
 int occurences_min = 3;
 int tab_k[6] = {17, 18, 19, 20, 23, 24};
+int score[6] = {0, 0, 0, 0, 0, 0};
 int resu;
 
 
@@ -31,6 +32,8 @@ void sys_callback(){
 	int i = 0;
 	while( i < 6 && !laser){
 		laser = compteur_occurences[i] >= occurences_min;
+		if (laser)
+			score[i]++;
 		i++;
 	}
 	if(laser)

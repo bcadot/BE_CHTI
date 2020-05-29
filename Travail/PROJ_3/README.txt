@@ -1,1 +1,1 @@
-Partie 2.2 tout juste commencée.
+Partie 3 finie.

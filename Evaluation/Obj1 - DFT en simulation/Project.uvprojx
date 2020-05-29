@@ -388,16 +388,6 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>GenTable.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\GenTable.s</FilePath>
-            </File>
-            <File>
-              <FileName>GenSignal.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\GenSignal.s</FilePath>
-            </File>
-            <File>
               <FileName>dft.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\Src\dft.s</FilePath>
